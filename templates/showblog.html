@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: black;
+            }
+            h1,h2,p,h4{
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        {% for obj in blog %}
+        <center>
+        <h1>{{ obj.title }}</h1>
+        <h2>{{ obj.author }}</h2>
+        <p>{{ obj.blog }}</p>
+        <h4>{{ obj.date }}</h4>
+        <hr>
+        </center>
+        {% endfor %}
+    </body>
+</html>

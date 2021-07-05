@@ -1,0 +1,43 @@
+{% block index %}
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+        <style>
+            input{
+                margin-top: 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="margin-left: 20%;">
+            <h1>MYBLOGS</h1>
+        </div>
+        <div style="background-color: #424949;" id="inner">
+            <ul>
+                <li><a href="/users/logout/">LOGOUT</a></li>
+                <li><a href="/users/profile/">PROFILE</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="/blog/allblogs/">ALL BLOGS</a></li>
+                <li><a href="/blog/addblog/">ADD BLOGS</a></li>
+                <li><a href="/blog/myblog/">MY BLOGS</a></li>
+            </ul>
+        </div>
+        <center>
+        <h3 style="color: red;">{{ msg }}</h1>
+        <form action="/blog/search/" method="POST">
+            {% csrf_token %}
+            <select name="category">
+                <option value="edu">Education</option>
+                <option value="environ">Environment</option>
+                <option value="sports">Sports</option>
+                <option value="fitness">Fitness</option>
+                <option value="travel">Travel</option>
+                <option value="music">Music</option>
+                <option value="entertain">Entertainment</option>
+            </select> <input type="submit" value="SEARCH" style="color: teal; background-color:black;">
+        </form>
+        </center>
+    </body>
+</html>
+{% endblock %}

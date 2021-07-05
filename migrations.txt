@@ -1,0 +1,29 @@
+1. python manage.py makemigrations
+    This command will make another file describing your model in details
+    We will use this file in your next migrations 
+    This command will create files in sequent 0001, 0002, 0003, 0004
+
+2. python manage.py sqlmigrate users 0001
+    It will return your the command which is understood by your database
+
+3. python manage.py migrate 
+    it will migrate your model (tables) in your database.
+
+
+Whenever you enter data we have 3 options
+1. Directly from mysql shell
+2. Admin Panel
+    Path of admin panel is localhost/admin
+    To set username and password for admin panel
+    python manage.py createsuperuser
+        username 
+            simrangrover
+        password
+            adminadmin
+    To show your model/table on admin panel you have to register it in admin.py file
+    
+    User this username and password for your admin login
+3. Django Shell
+
+
+python manage.py inspectdb > filepath 

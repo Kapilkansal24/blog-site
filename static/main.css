@@ -1,0 +1,20 @@
+h1{
+    font-size: 50px;
+    color: #34495E ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+li{
+    display: inline;
+    padding: 55px;
+}
+a{
+  color: white; 
+  font-size: 20px; 
+  text-decoration: none;
+}
+#inner{
+    padding: 2px;
+}
+a:hover{
+    background-color: black;
+}

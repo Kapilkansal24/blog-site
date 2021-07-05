@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+            h3{
+                font-size: 30px;
+                color: cadetblue;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            h4{
+                font-size: 25px;
+                color: #123456;
+                font-family:fantasy;
+            }
+            h5{
+                font-size: 20px;
+                color: coral;
+                font-family: monospace;
+            }
+        </style>
+    </head>
+    <body>
+        {% include "index.html" %}
+        {% block index %}
+        {% endblock %}
+        <center>
+            <h3>{{ username }}</h3>
+            <h4>{{ object.firstname }}  {{ object.lastname}}</h4>
+            <h5>{{ object.email }}</h5>
+        </center>
+    </body>
+</html>

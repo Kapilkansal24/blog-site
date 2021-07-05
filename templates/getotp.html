@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            label{
+                font-size: 30px;
+                color: teal;
+                font-style: italic;
+                font-weight: bold;
+            }
+            form{
+                margin-top: 10%;
+            }
+            #sub{
+                background-color: black;
+                color: white;
+                font-size: 25px;
+            }
+            small{
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        {% include "nav.html" %}
+        {% block head %}
+        {% endblock %}
+        <center>
+          <small style="color: tomato;"> {{msg}} </small>
+        <form method="POST" action="/users/checkotp/">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="SUBMIT" id="sub">
+        </form>
+        </center>
+    </body>
+</html>
